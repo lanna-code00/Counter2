@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="interface.css">
+</head>
+	
+<body>
+   <nav class="shadow-sm mb-5" style="display: none" id="menuBar">
+		<span id="menu" class="fa fa-align-justify shadow-sm text-white"></span>
+		<span id="menu1" class="fa fa-align-justify shadow-sm"></span>
+		<span id="arrow" class="fa fa-arrow-left float-right mr-3 shadow-sm text-white" id="backArrow" onclick="backToMainPage()"></span>
+	</nav>
+	<div id="sidebar" class="shadow-sm">
+		<ul>
+			<li>
+				<a href="#" id="calculateButton">CALCULATE</a>
+			</li>
+				<li>
+				<a href="#">HISTORY</a>
+			</li>
+				<li>
+				<a href="#" id="aboutButton">ABOUT</a>
+			</li>
+				<li>
+				<a href="#" id="exitButton" data-toggle="modal" data-target="#exampleModal">EXIT</a>
+			</li>
+				<li>
+				<a href="#">HELP</a>
+			</li>
+				<li>
+				<a href="#">HISTORY</a>
+			</li>
+		</ul>
+	</div>
+
+	
+	<div class="container" id="allContainer">
+		<div class="row" style="display: none" id="mainPage">
+			<div class="col-md-12">
+			<div class="card shadow-sm mb-5">
+					<div class="card-header" id="timing">
+					</div>
+				
+				</div>
+				
+				<div class="card shadow-sm mb-3">
+					<div class="card-header">
+					  <span class="fa fa-car"></span> CAR
+						
+							<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><span class="fa fa-edit"></span></span>
+							</div>
+							<input type="text" class="form-control form-control-sm" readonly id="describeInput">
+							</div>
+					</div>
+					<div class="card-body mt-3">
+					   <div class="border rounded m-1">
+						   <button type="button" class="btn btn-primary btn-block text-left" id="countMe" >
+							  Count <span class="fa fa-trash float-right p-2 fa-1x"></span>
+							   <span class="badge badge-light p-2" style="margin-left: 450px" data-counter>0</span>
+							  
+						   </button>
+						</div>
+					</div>
+				</div>
+				<div class="card shadow-sm mb-3">
+					<div class="card-header">
+					  <span class="fa fa-biking"></span> BIKE
+						
+						
+							<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><span class="fa fa-edit"></span></span>
+							</div>
+							<input type="text" class="form-control form-control-sm" readonly id="describeInput">
+							</div>
+					</div>
+					<div class="card-body mt-3">
+					   <div class="border rounded m-1">
+						   <button type="button" class="btn btn-primary btn-block text-left counter1" >
+							  Count <span class="fa fa-trash float-right p-2 fa-1x"></span>
+							   <span class="badge badge-light p-2" style="margin-left: 450px" data-counter>0</span>
+						   </button>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		<div class="row" id="welcomePage"> 
+			<div class="col-md-12">
+		  <header class="masthead d-flex">
+    <div class="container text-center my-auto">
+      <h1 class="mb-5 text-white">WELCOME TO</h1>
+      <h3 class="mb-5 text-white">
+        <em>A Free Counting app made for Transport students or any other traffic counting.....</em>
+      </h3>
+	<button class="btn btn-primary" type="button" style="margin-top: 180px; background: none;border:none;outline:none">
+  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+  Loading...
+</button>
+     </div>
+    <div class="overlay"></div>
+  </header>
+				
+		</div>
+		</div>
+		
+		<div class="row" id="exitPage"> 
+			<div class="col-md-12">
+		  <header class="masthead d-flex">
+    <div class="container text-center my-auto">
+      <h1 class="mb-5 text-white">Thank You !</h1>
+    </div>
+    <div class="overlay"></div>
+  </header>
+				
+		</div>
+		</div>
+		
+			<div class="row" id="calculatePage"> 
+			<div class="col-md-12">
+		  <header class="masthead d-flex">
+    <div class="container text-center my-auto">
+      <h1 class="mb-5 text-white">LET'S CALCULATE</h1>
+        <button class="btn btn-dark">CALCULATE</button>
+		<input type="text" class="form-control form-control-sm mt-5" readonly>
+     </div>
+    <div class="overlay"></div>
+  </header>
+				
+		</div>
+		</div>
+		
+		<div class="row" id="aboutPage"> 
+			<div class="col-md-12">
+		  <header class="masthead d-flex">
+    <div class="container text-center my-auto">
+      <h1 class="mb-5 text-white">ABOUT THE APP</h1>
+		<p class="text-white" style="font-size:2em">This is an app made for transport Students in various universities and other purposes as wells....</p>
+       </div>
+    <div class="overlay"></div>
+  </header>
+				
+		</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog modal-sm p-3">
+			<div class="modal-content">
+				<div class="modal-header bg-secondary text-white">
+					<h6 class="modal-title">
+						ADD ITEM :
+						</h6>
+					  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="input1">ITEM :</label>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><span class="fa fa-car-alt"></span></span>
+							</div>
+							<input type="text" class="form-control form-control-sm" id="itemList" list="item1">
+							</div>
+						<datalist id="item1">
+							<option value="Truck">
+							<option value="Bus">
+							<option value="Bicycle">
+						</datalist>
+					</div>
+					<div class="form-group">
+						<label for="input1">DESCRIPTION :</label>
+						<input type="text" class="form-control form-control-sm" id="item1">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="addItem">ADD</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:2000" id="exitModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Are you sure you want to Exit ? </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="stay">STAY</button>
+        <button type="button" class="btn btn-danger" id="exit">EXIT</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<button id="add" style="display: none" class="btn shadow-sm border rounded-circle float-right m-3 text-white" data-toggle="modal" data-target="#myModal"><span class="fa fa-plus"></span></button>
+</body>
+	<script src="jquery/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="interface.js"></script>
+	
+</html>
