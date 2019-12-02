@@ -42,57 +42,36 @@
 		<div class="row" style="display: none" id="mainPage">
 			<div class="col-md-12">
 			<div class="card shadow-sm mb-5">
-					<div class="card-header" id="timing">
+	  <div class="h1 col-md-12 ml-1 text-white mb-3" style="text-align: center">TRAFFIC COUNTER APP</div>
+			<div class="card-header" id="timing" style="color: #fff; background: #02015C !important; border: none">
 					</div>
-				
+			 <div id="vehicleDiv" style="width:100%">
+				 
+				 <div class="input-group mb-3 rounded mt-5">
+  <div class="input-group-prepend">
+    <span class="input-group-text fa fa-car-alt p-3 fa-1x text-white" onmouseup="countMe(event)" id="countNums" data-long-press-delay="2000" style="background:#0F0096 !important"> CAR</span>
+  </div>
+  <input type="text" class="form-control p-3 text-white allcounters" type="text" id="inlineCheckbox1" value="0" readonly onmouseup="countMe(event)" id="countNums" data-long-press-delay="2000" style="height: 73px;text-align: center; font-size: 40px;background:#0F0096 !important">
+  <div class="input-group-append">
+    <span class="input-group-text fa fa-trash-alt p-3 fa-1x text-white" style="background:#0F0096 !important"></span>
+  </div>
+</div>
+			
+
+	<div class="input-group mb-3 rounded mt-5">
+	<div class="input-group-prepend">
+    <span class="input-group-text fa fa-biking p-3 fa-1x text-white" onmouseup="clickTocount(event)" id="countNume" data-long-press-delay="2000" style="background: #0F0096 !important"> BIKE</span>
+  </div>
+  <input type="text" class="form-control p-3 text-white allcounters" type="text" id="inlineCheckbox2" value="0" readonly onmouseup="clickTocount(event)" id="countNume" data-long-press-delay="2000" style="height: 73px;text-align: center; font-size: 40px;background:#0F0096 !important">
+  <div class="input-group-append">
+    <span class="input-group-text fa fa-trash-alt p-3 fa-1x text-white" style="background:#0F0096 !important"></span>
+  </div>
+</div>
 				</div>
-				
-				<div class="card shadow-sm mb-3">
-					<div class="card-header">
-					  <span class="fa fa-car"></span> CAR
-						
-							<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text"><span class="fa fa-edit"></span></span>
-							</div>
-							<input type="text" class="form-control form-control-sm" readonly id="describeInput">
-							</div>
-					</div>
-					<div class="card-body mt-3">
-					   <div class="border rounded m-1">
-						   <button type="button" class="btn btn-primary btn-block text-left" id="countMe" >
-							  Count <span class="fa fa-trash float-right p-2 fa-1x"></span>
-							   <span class="badge badge-light p-2" style="margin-left: 450px" data-counter>0</span>
-							  
-						   </button>
-						</div>
-					</div>
 				</div>
-				<div class="card shadow-sm mb-3">
-					<div class="card-header">
-					  <span class="fa fa-biking"></span> BIKE
-						
-						
-							<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text"><span class="fa fa-edit"></span></span>
-							</div>
-							<input type="text" class="form-control form-control-sm" readonly id="describeInput">
-							</div>
-					</div>
-					<div class="card-body mt-3">
-					   <div class="border rounded m-1">
-						   <button type="button" class="btn btn-primary btn-block text-left counter1" >
-							  Count <span class="fa fa-trash float-right p-2 fa-1x"></span>
-							   <span class="badge badge-light p-2" style="margin-left: 450px" data-counter>0</span>
-						   </button>
-						</div>
-					</div>
 				</div>
+			</div>	
 				
-				
-			</div>
-		</div>
 		<div class="row" id="welcomePage"> 
 			<div class="col-md-12">
 		  <header class="masthead d-flex">
